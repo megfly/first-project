@@ -6,3 +6,5 @@ module First
     # Your code goes here...
   end
 end
+
+require_relative './first-project/cli'
