@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/environment.rb' #pick up a file 
-
-
-MakeupSearch::CLI.new.call #run method in CLI lib folder

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/makeup_search' #relative = apart of the family tree, if external then require
+
+MakeupSearch::CLI.new.call
+
