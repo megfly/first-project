@@ -1,5 +1,5 @@
 require_relative './makeup_search/version'
-require_relative './makeup_search/cli'
+require_relative './cli'
 
 module MakeupSearch
     class Error < StandardError; end
