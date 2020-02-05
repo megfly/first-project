@@ -1,4 +1,4 @@
-class CLI
+class MakeupSearch::CLI
   
   def call 
     puts 'Hello gorgeous!'
