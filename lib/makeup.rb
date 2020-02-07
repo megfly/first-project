@@ -14,7 +14,7 @@ class Makeup
   
   def initialize(hash)
     hash.each.do |key, value|
-      self.send(("#{key}="), value))
+      self.send(("#{key}="), value)
     end 
     save
   end 
