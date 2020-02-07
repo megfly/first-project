@@ -11,9 +11,10 @@ class MakeupSearch::CLI
     input = gets.strip.downcase
     
     if input == "products"
-      puts "products"
+      product_list
+      input_menu
     else if input == "exit"
-      puts "exit"
+      goodbye
     else 
       invalid_entry
       end 
@@ -25,4 +26,14 @@ class MakeupSearch::CLI
       input_menu
   end 
   
-end 
+  def product_list
+    puts "1, lipstick"
+    puts "2, blush"
+    puts "3, foundation"
+  end 
+  
+  def goodbye 
+    "Goodbye"
+  end 
+  
+end
