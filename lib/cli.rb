@@ -30,10 +30,13 @@ class MakeupSearch::CLI
     puts "1, lipstick"
     puts "2, blush"
     puts "3, foundation"
+    puts ""
+    puts ""
+    puts "Which category would you like?"
   end 
   
   def goodbye 
-    "Goodbye"
+    puts "Goodbye"
   end 
   
 end
