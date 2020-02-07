@@ -33,6 +33,11 @@ class MakeupSearch::CLI
     puts ""
     puts ""
     puts "Which category would you like?"
+    prouduct_category_selection
+    puts ""
+    puts ""
+    puts "Which product would you like details about?"
+    product_details_selection
   end 
   
   def goodbye 
