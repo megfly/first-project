@@ -20,6 +20,6 @@ puts "environment file"
 
 
 
-url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
-response = RestClient.get(url)
+url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
+response = RestClient.get(https://makeup-api.herokuapp.com/api/v1/products.json)
 JSON.parse(response)
