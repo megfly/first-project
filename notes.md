@@ -18,5 +18,7 @@ classes (blueprint) we may need:
 -API
 
 
-"name"
-"description"
+make request
+gather data
+bring into ruby app
+create ruby objects with taht data
