@@ -16,3 +16,7 @@ classes (blueprint) we may need:
 -product_category 
 -CLI 
 -API
+
+
+"name"
+"description"

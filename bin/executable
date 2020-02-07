@@ -5,16 +5,6 @@ require 'rest-client'
 require 'json'
 require 'pry'
 
-response = RestClient.get("https://makeup-api.herokuapp.com/api/v1/products.json")
-products = JSON.parse(rest.body)
-
-products.each do |key, value|
-  binding.pry
-end
-
-
-
-
 MakeupSearch::CLI.new.call
 
 
