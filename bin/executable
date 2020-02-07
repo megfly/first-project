@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/environment' 
+require 'rest-client'
+require 'json'
 
 MakeupSearch::CLI.new.call
 
