@@ -14,3 +14,8 @@ class MakeupSearch::API
   end 
   
 end 
+
+
+#url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
+#response = RestClient.get(https://makeup-api.herokuapp.com/api/v1/products.json)
+#JSON.parse(response)

@@ -13,13 +13,3 @@ module MakeupSearch
 end
 
 puts "environment file"
-
-
-
-
-
-
-
-url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
-response = RestClient.get(https://makeup-api.herokuapp.com/api/v1/products.json)
-JSON.parse(response)
