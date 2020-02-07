@@ -4,6 +4,8 @@ require_relative '../lib/environment'
 require 'rest-client'
 require 'json'
 
+RestClient.get("https://makeup-api.herokuapp.com/api/v1/products.json")
+
 MakeupSearch::CLI.new.call
 
 
