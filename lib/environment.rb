@@ -5,6 +5,7 @@ require_relative './makeup'
 
 require 'rest-client'
 require 'json'
+require 'pry'
 
 module MakeupSearch
     class Error < StandardError; end
