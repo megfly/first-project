@@ -40,6 +40,14 @@ class MakeupSearch::CLI
     product_details_selection
   end 
   
+  def prouduct_category_selection 
+    input = gets.strip.downcase
+  end 
+  
+  def product_details_selection 
+    input = gets.strip.downcase
+  end 
+  
   def goodbye 
     puts "Goodbye"
   end 
