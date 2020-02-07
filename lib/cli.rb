@@ -33,19 +33,23 @@ class MakeupSearch::CLI
     puts ""
     puts ""
     puts "Which category would you like?"
-    prouduct_category_selection
+    input = gets.strip.downcase
+    prouduct_category_selection(input)
     puts ""
     puts ""
     puts "Which product would you like details about?"
-    product_details_selection
+    input = gets.strip.downcase
+    product_details_selection(input)
   end 
   
-  def prouduct_category_selection 
-    input = gets.strip.downcase
+  def prouduct_category_selection(product_category) 
+    puts "#{product_category}"
+    
   end 
   
-  def product_details_selection 
-    input = gets.strip.downcase
+  def product_details_selection(product_details)
+    puts "#{product_details}"
+    
   end 
   
   def goodbye 
