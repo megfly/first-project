@@ -1,7 +1,7 @@
 class MakeupSearch::API 
   
   def self.get_data 
-      url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
+      url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
       response = HTTParty.get(url)
       response.parsed_response
       
