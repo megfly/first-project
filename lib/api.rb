@@ -6,10 +6,10 @@ class MakeupSearch::API
     response = RestClient.get(url)
     JSON.parse(response)
     
-    #product_array.each do |product|
-      #Makeup.new(product)
-    #end 
+    product_array.each do |product|
+      Makeup.new(product)
+    end 
   end 
-    
+
   
 end 
