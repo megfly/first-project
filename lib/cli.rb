@@ -3,7 +3,6 @@ class MakeupSearch::CLI
   
   def call 
       puts 'Hello gorgeous! What are you looking for today?'
-      binding.pry
       puts 'To see makeup products, enter products'
       puts 'To exit, enter exit'
     input_menu
@@ -33,11 +32,16 @@ class MakeupSearch::CLI
   
   
   def product_list
-    puts "1, lipstick"
-    puts "2, blush"
-    puts "3, foundation"
-    puts ""
-    puts ""
+    puts "Blush"
+    puts "Bronzer"
+    puts "Eyebrow"
+    puts "Eyeliner"
+    puts "Eyeshadow"
+    puts "Foundation"
+    puts "Lip liner"
+    puts "Lipstick"
+    puts "Mascara"
+    puts "Nail Polish"
     
     
     puts "Which category would you like?"
