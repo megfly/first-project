@@ -5,8 +5,8 @@ class MakeupSearch::CLI
       puts 'Hello gorgeous! What are you looking for today?'
       puts 'To see makeup products, enter products'
       puts 'To exit, enter exit'
-    input_menu
     API.get_data
+    input_menu
   end 
   
   
