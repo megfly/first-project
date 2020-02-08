@@ -11,5 +11,3 @@ module MakeupSearch
     class Error < StandardError; end
     # Your code goes here...
 end
-
-puts "environment file"

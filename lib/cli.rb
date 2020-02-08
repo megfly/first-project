@@ -1,31 +1,36 @@
 class MakeupSearch::CLI
   
+  
   def call 
-    puts 'Hello gorgeous! What are you looking for today?'
-    puts 'To see makeup products, enter products'
-    puts 'To exit, enter exit'
+      puts 'Hello gorgeous! What are you looking for today?'
+      binding.pry
+      puts 'To see makeup products, enter products'
+      puts 'To exit, enter exit'
     input_menu
     API.get_data
   end 
   
+  
   def input_menu
-    input = gets.strip.downcase
+      input = gets.strip.downcase
     
-    if input == "products"
-      product_list
-      input_menu
-    else if input == "exit"
-      goodbye
-    else 
-      invalid_entry
+      if input == "products"
+          product_list
+          input_menu
+      else if input == "exit"
+          goodbye
+      else 
+          invalid_entry
+        end 
       end 
     end 
-  end 
+    
   
   def invalid_entry 
-    puts "invalid entry, try again"
-      input_menu
+      puts "invalid entry, try again"
+        input_menu
   end 
+  
   
   def product_list
     puts "1, lipstick"
@@ -33,6 +38,8 @@ class MakeupSearch::CLI
     puts "3, foundation"
     puts ""
     puts ""
+    
+    
     puts "Which category would you like?"
     input = gets.strip.downcase
     prouduct_category_selection(input)
