@@ -32,27 +32,19 @@ class MakeupSearch::CLI
   
   
   def product_list
-    #Makeup.all.each_with_index do |product, index|
-      #puts "#{index + 1}."
-    puts "Blush"
-    puts "Bronzer"
-    puts "Eyebrow"
-    puts "Eyeliner"
-    puts "Eyeshadow"
-    puts "Foundation"
-    puts "Lip liner"
-    puts "Lipstick"
-    puts "Mascara"
-    puts "Nail Polish"
+    #Makeup.all.each_with_index do |product_type, index|
+      #puts "#{index + 1}. #{product_type.name}"
+    #end 
+    puts "blush"
     puts ""
     puts ""
     puts "Which product type would you like to see?"
     input = gets.strip.downcase
-    prouduct_category_selection(input)
+    prouduct_type_selection(input)
   end 
   
-  def prouduct_category_selection(product_category) 
-    puts "#{product_category}"
+  def prouduct_type_selection(product_type) 
+    puts "#{product_type}"
     #go over makeup array, find method to find the product_category
   end 
   
