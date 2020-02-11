@@ -12,7 +12,7 @@ class MakeupSearch::CLI
     puts 'To see products, enter products'
     products = gets.strip.downcase
     api = MakeupSearch::API.new(products)
-    API.get_data
+    api.get_data
   end 
   
   #def input_menu

@@ -16,8 +16,6 @@ class MakeupSearch::API
       response = HTTParty.get(url)
       response.parsed_response
   end 
-
-  
 end 
 
 
