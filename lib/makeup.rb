@@ -21,10 +21,4 @@ class MakeupSearch::Makeup
     @@all
   end 
   
-  def self.find_by_name(name)
-    self.all.select do |product|
-      product.name == name 
-    end 
-  end 
-  
 end 

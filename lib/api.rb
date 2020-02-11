@@ -14,9 +14,11 @@ class MakeupSearch::API
   def get_data 
       url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
       response = HTTParty.get(url)
-      response.parsed_response
+      response.parsed_response.flatten
+    
       binding.pry
       #figuring out how to get string data...error 
+    end 
   end 
 end 
 
