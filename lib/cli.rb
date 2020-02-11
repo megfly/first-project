@@ -32,10 +32,9 @@ class MakeupSearch::CLI
   
   
   def product_list
-    #Makeup.all.each_with_index do |product_type, index|
-      #puts "#{index + 1}. #{product_type.name}"
-    #end 
-    puts "blush"
+    Makeup.all.each_with_index do |product_type, index|
+      puts "#{index + 1}. #{product_type.name}"
+    end 
     puts ""
     puts ""
     puts "Which product type would you like to see?"
