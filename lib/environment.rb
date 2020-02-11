@@ -3,7 +3,6 @@ require_relative './cli'
 require_relative './api'
 require_relative './makeup'
 
-require 'rest-client'
 require 'json'
 require 'pry'
 require 'httparty'
