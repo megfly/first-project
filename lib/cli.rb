@@ -22,7 +22,7 @@ class MakeupSearch::CLI
       end 
   end 
   
-  def product_type_list
+  def product_type_list      #soooo iterate over the data to get the product_type
     Makeup.all.each_with_index do |product, index|
       puts "#{index + 1}, #{product.name}"
     end 
@@ -45,5 +45,5 @@ class MakeupSearch::CLI
   def invalid_entry 
     puts "Invalid entry, please try again"
   end 
-  
+end 
 end
