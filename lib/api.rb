@@ -4,13 +4,12 @@ require_relative './makeup_search/version'
 
 class MakeupSearch::API 
   
-  attr_accessor :name, :brand, :product_type, :category, :description
+  attr_accessor :name, :brand, :product_type, :description
   
   def initialize(name)
     @name = name 
     @brand = brand 
     @product_type = product_type 
-    @category = category 
     @description = description
   end 
   

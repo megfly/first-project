@@ -1,15 +1,14 @@
 require 'pry'
 class MakeupSearch::Makeup
   
-  attr_accessor :name, :brand, :product_type, :category, :description
+  attr_accessor :name, :brand, :product_type, :description
   
   @@all = [] 
   
-  def initialize(name, brand, product_type, category, description)
+  def initialize(name, brand, product_type, description)
     @name = name 
     @brand = brand 
     @product_type = product_type 
-    @category = category 
     @description = description
   end 
   

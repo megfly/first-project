@@ -6,14 +6,14 @@ class MakeupSearch::CLI
       puts "To see products, enter 'products'"
       puts "To exit, enter 'exit"
       MakeupSearch::API.get_data
-    menu
+    main_menu
   end 
   
-  def menu 
+  def main_menu 
     input = gets.strip.downcase 
     
       if input == "products"
-        product_type_list 
+        product_list 
       else if input == "exit"
         bye
       else 
@@ -22,21 +22,16 @@ class MakeupSearch::CLI
       end 
   end 
   
-  def product_type_list      #soooo iterate over the data to get the product_type
-    Makeup.all.each_with_index do |product, index|
-      puts "#{index + 1}, #{product.name}"
+  def product_list      #soooo iterate over the data to get the product_type
+    MakeupSearch::Makeup.all.each.with_index(1) do |product, index|
+      puts "#{index + 1}. #{product.name}"
     end 
       puts ""
-      puts "nowwww whaaaaaaaaaat"
+      puts "Select a product you want more information about"
+      input = gets.strip.to_i - 1 
+    end 
     
-    input = gets.strip.downcase
-  end 
-  
-  #def product_type_selection(product_type)
-    #puts "#{product_type}"
-    #find the product_type
-  #end 
-  
+    
   
   def bye 
     puts "See you next time!"
