@@ -6,6 +6,7 @@ class MakeupSearch::CLI
       puts 'Hello gorgeous!'
       puts "To see products, enter 'products'"
       puts "To exit, enter 'exit'"
+      input = gets.strip.downcase
       MakeupSearch::API.get_data
     main_menu
   end 
@@ -27,19 +28,20 @@ class MakeupSearch::CLI
   def product_list      #soooo iterate over the data to get the product_name 
       puts "Which product are you searching for today?"
       
-      MakeupSearch::API.each.with_index(1) do |product_type, index|
-        puts "#{index}. #{product_type}"
+            #puts "Blush"
+            #puts "Bronzer"
+            #puts "Eyebrow"
+            #puts "Eyeliner"
+            #puts "Eyeshadow"
+            #puts "Foundation"
+            #puts "Lip liner"
+            #puts "Lipstick"
+            #puts "Mascara"
+            #puts "Nail polish"
+      
+      #MakeupSearch::API.each.with_index(1) do |product_type, index|
+        #puts "#{index}. #{product_type}"
         
-      #puts "Blush"
-      #puts "Bronzer"
-      #puts "Eyebrow"
-      #puts "Eyeliner"
-      #puts "Eyeshadow"
-      #puts "Foundation"
-      #puts "Lip liner"
-      #puts "Lipstick"
-      #puts "Mascara"
-      #puts "Nail polish"
         
         #iterate over the product they choose to search for all products in that category
        
@@ -47,7 +49,7 @@ class MakeupSearch::CLI
       puts ""
       input = gets.strip.downcase 
       
-      binding.pry
+
     end 
   end 
     

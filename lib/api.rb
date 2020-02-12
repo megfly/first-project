@@ -20,6 +20,8 @@ class MakeupSearch::API
       
       makeup_arr.each do |makeup|
         #makeup_object = Makeup.new
+        
+        product_type = makeup_arr["product_type"]
     end 
     
   end 
