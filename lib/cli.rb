@@ -3,14 +3,27 @@ class MakeupSearch::CLI
   
   def call 
       puts 'Hello gorgeous! What are you searching for today?'
-      #gets product_type
+      puts "To see products, enter 'products'"
+      puts "To exit, enter 'exit"
+
       products = gets.strip.downcase
-      puts 'teeeeeeeeeeeeeeeesting testing lets see what happens'
-      
-      #puts 'To see makeup products, enter products'
-      #puts 'To exit, enter exit'
-    api = MakeupSearch::API.new(products)
-    MakeupSearch::API.get_data
+
+          api = MakeupSearch::API.new(products)
+          MakeupSearch::API.get_data
+    menu
+  end 
+  
+  def menu 
+    input = gets.strip.downcase 
+    
+      if input == "products"
+        puts product_type_list 
+      else if input == "exit"
+        puts "exit"
+      else 
+        puts "Invalid entry, please try again"
+        menu 
+      end 
   end 
   
   def product_type_list

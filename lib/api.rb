@@ -20,7 +20,7 @@ class MakeupSearch::API
       makeup_arr = JSON.parse(response.body)
       
       makeup_arr.each do |makeup|
-      end 
+    end 
     
   end 
 end 
