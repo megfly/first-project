@@ -20,7 +20,6 @@ class API
       makeup_arr = JSON.parse(response.body)
       
       makeup_arr.each do |makeup|
-        binding.pry
       end 
     
   end 
