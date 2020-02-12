@@ -10,6 +10,7 @@ class MakeupSearch::Makeup
     @brand = brand 
     @product_type = product_type 
     @description = description
+    @@all << self
   end 
   
   def save 

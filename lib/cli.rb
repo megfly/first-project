@@ -15,17 +15,17 @@ class MakeupSearch::CLI
     
       if input == "products"
         product_list 
-        main_menu
       else if input == "exit"
         bye
       else 
         invalid_entry
+        main_menu
       end 
     end 
   end 
   
   def product_list      #soooo iterate over the data to get the product_name 
-    MakeupSearch::API.all.each_with_index do |product, index|
+    MakeupSearch::Makeup.all.each_with_index do |product, index|
       puts "#{index + 1}. #{product.name}"
   end 
       puts ""
