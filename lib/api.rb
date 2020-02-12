@@ -1,5 +1,7 @@
 require 'pry'
-class MakeupSearch::API 
+require 'httparty'
+require_relative './makeup_search/version'
+class API 
   
   attr_accessor :name, :brand, :product_type, :category, :description
   
@@ -11,18 +13,19 @@ class MakeupSearch::API
     @description = description
   end 
   
-  def get_data 
+  def self.get_data 
       url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
       response = HTTParty.get(url)
-      response.parsed_response.flatten
+      makeup_arr = JSON.parse(response.body)
+      
+      makeup_arr.each do |makeup|
+        binding.pry
+      end 
     
-      binding.pry
-      #figuring out how to get string data...error 
-    end 
   end 
 end 
 
 
-
+API.get_data
 
 
