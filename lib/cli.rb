@@ -10,12 +10,13 @@ class MakeupSearch::CLI
       #puts 'To see makeup products, enter products'
       #puts 'To exit, enter exit'
     api = MakeupSearch::API.new(products)
-    api.get_data
+    MakeupSearch::API.get_data
   end 
   
   def product_type_list
     Makeup.all.each_with_index do |product, index|
       puts "#{index + 1}, #{product.name}"
+    end 
       puts ""
       puts "nowwww whaaaaaaaaaat"
     
@@ -26,12 +27,6 @@ class MakeupSearch::CLI
   def product_type_selection(product_type)
     puts "#{product_type}"
     #find the product_type
-  end 
-  
-
-  
-  def goodbye 
-    puts "Goodbye"
   end 
   
 end

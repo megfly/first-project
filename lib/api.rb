@@ -2,7 +2,7 @@ require 'pry'
 require 'httparty'
 require_relative './makeup_search/version'
 
-class API 
+class MakeupSearch::API 
   
   attr_accessor :name, :brand, :product_type, :category, :description
   
@@ -26,6 +26,6 @@ class API
 end 
 
 
-API.get_data
+MakeupSearch::API.get_data
 
 
