@@ -3,7 +3,7 @@ require 'pry'
 class MakeupSearch::CLI
   
   def call 
-      puts 'Hello gorgeous! What are you searching for today?'
+      puts 'Hello gorgeous!'
       puts "To see products, enter 'products'"
       puts "To exit, enter 'exit'"
       MakeupSearch::API.get_data
@@ -25,12 +25,30 @@ class MakeupSearch::CLI
   end 
   
   def product_list      #soooo iterate over the data to get the product_name 
-    MakeupSearch::Makeup.all.each_with_index do |product, index|
-      puts "#{index + 1}. #{product.name}"
-  end 
+      puts "Which product are you searching for today?"
+      
+      MakeupSearch::API.each.with_index(1) do |product_type, index|
+        puts "#{index}. #{product_type}"
+        
+      #puts "Blush"
+      #puts "Bronzer"
+      #puts "Eyebrow"
+      #puts "Eyeliner"
+      #puts "Eyeshadow"
+      #puts "Foundation"
+      #puts "Lip liner"
+      #puts "Lipstick"
+      #puts "Mascara"
+      #puts "Nail polish"
+        
+        #iterate over the product they choose to search for all products in that category
+       
       puts ""
       puts ""
       input = gets.strip.downcase 
+      
+      binding.pry
+    end 
   end 
     
     

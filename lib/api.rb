@@ -19,6 +19,7 @@ class MakeupSearch::API
       makeup_arr = JSON.parse(response.body)
       
       makeup_arr.each do |makeup|
+        #makeup_object = Makeup.new
     end 
     
   end 
