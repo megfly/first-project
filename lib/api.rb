@@ -1,6 +1,7 @@
 require 'pry'
 require 'httparty'
 require_relative './makeup_search/version'
+
 class API 
   
   attr_accessor :name, :brand, :product_type, :category, :description
