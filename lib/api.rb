@@ -1,7 +1,3 @@
-require 'pry'
-require 'httparty'
-require_relative './makeup_search/version'
-
 class MakeupSearch::API 
   
   def self.get_data 
@@ -9,7 +5,6 @@ class MakeupSearch::API
       response = HTTParty.get(url)
       response.each do |makeup|
         #makeup_object = Makeup.new
-        binding.pry
         
         name = makeup["name"]
         brand = makeup["brand"]
@@ -17,14 +12,8 @@ class MakeupSearch::API
         description = makeup["description"]
         
         MakeupSearch::Makeup.new(name, brand, product_type, description)
-        
+        binding.pry
     end 
     
   end 
 end 
-
-
-MakeupSearch::API.get_data
-binding.pry
-true 
-

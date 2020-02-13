@@ -6,8 +6,3 @@ require_relative './makeup'
 require 'json'
 require 'pry'
 require 'httparty'
-
-module MakeupSearch
-    class Error < StandardError; end
-    # Your code goes here...
-end

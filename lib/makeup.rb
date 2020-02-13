@@ -1,4 +1,3 @@
-require 'pry'
 class MakeupSearch::Makeup
   
   attr_accessor :name, :brand, :product_type, :description
@@ -13,9 +12,9 @@ class MakeupSearch::Makeup
     @@all << self
   end 
   
-  #def save 
-    #@@all << self
-  #end 
+  def save 
+    @@all << self
+  end 
   
   def self.all 
     @@all
