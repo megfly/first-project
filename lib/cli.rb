@@ -27,7 +27,7 @@ class MakeupSearch::CLI
   
   def product_list      #soooo iterate over the data to get the product_name 
       puts "Which product are you searching for today?"
-      
+        input = gets.strip.downcase
             #puts "Blush"
             #puts "Bronzer"
             #puts "Eyebrow"
@@ -39,7 +39,7 @@ class MakeupSearch::CLI
             #puts "Mascara"
             #puts "Nail polish"
       
-      #MakeupSearch::API.each.with_index(1) do |product_type, index|
+      #MakeupSearch::API.each.with_index do |product_type, index|
         #puts "#{index}. #{product_type}"
         
         

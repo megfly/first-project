@@ -4,11 +4,10 @@ require_relative './makeup_search/version'
 
 class MakeupSearch::API 
   
-  attr_accessor :name, :brand, :product_type, :description
+  attr_accessor :name, :product_type, :description
   
   def initialize(name)
-    @name = name 
-    @brand = brand 
+    @name = name
     @product_type = product_type 
     @description = description
   end 
@@ -21,7 +20,10 @@ class MakeupSearch::API
       makeup_arr.each do |makeup|
         #makeup_object = Makeup.new
         
+        name = makeup_arr["name"]
         product_type = makeup_arr["product_type"]
+        description = makeup_arr["description"]
+        
     end 
     
   end 
