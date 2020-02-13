@@ -2,8 +2,8 @@ class MakeupSearch::CLI
   
   def call 
       puts "Hello gorgeous!"
-      puts "To see products, enter 'products'"
-      puts "To exit, enter 'exit'"
+      puts "To see products, enter 'products'."
+      puts "To exit, enter 'exit'."
       MakeupSearch::API.get_data
     main_menu
   end 
@@ -36,13 +36,12 @@ class MakeupSearch::CLI
             puts "Nail polish"
               input = gets.strip.downcase
             
-              MakeupSearch::Makeup.all.each_with_index do |product_type, index|
+              MakeupSearch::Makeup.all.each_with_index do |product_type, index|     #iterate over data and grab all product_type's with users selection
                 puts "#{index + 1}. #{product_type.name}"
               end 
-              
             puts ""
             puts ""
-       
+            #then when user selects a name of the product from the list, it gives them the product name, brand and details of that product
     end 
     
     
