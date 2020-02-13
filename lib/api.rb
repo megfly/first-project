@@ -12,7 +12,7 @@ class MakeupSearch::API
         description = makeup["description"]
         
         MakeupSearch::Makeup.new(name, brand, product_type, description)
-        binding.pry
+        
     end 
     
   end 

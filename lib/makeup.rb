@@ -1,8 +1,8 @@
 class MakeupSearch::Makeup
   
-  attr_accessor :name, :brand, :product_type, :description
+  @@all = []
   
-  @@all = [] 
+  attr_accessor :name, :brand, :product_type, :description
   
   def initialize(name, brand, product_type, description)
     @name = name 
