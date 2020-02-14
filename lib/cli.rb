@@ -32,15 +32,15 @@ class MakeupSearch::CLI
             puts "Eyeliner"
             puts "Eyeshadow"
             puts "Foundation"
-            puts "Lip liner"
-            puts "Lipstick"
-            puts "Mascara"
-            puts "Nail polish"
+            #puts "Lip liner"
+            #puts "Lipstick"
+            #puts "Mascara"
+            #puts "Nail polish"
               
               input = gets.strip.downcase
               
-                MakeupSearch::Makeup.all.each.with_index do |product_type, index|  
-                puts "#{index + 1}. #{product_type.name}"
+                MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
+                puts "#{index + 1}: #{product_type}"
               end 
                
             puts ""
