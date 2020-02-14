@@ -22,7 +22,9 @@ class MakeupSearch::CLI
     end 
   end 
   
-  def product_list      
+  def product_list    
+    #put invalid_entry somewhere....accidentally misspled blush and it kicked me out
+    
       puts "Which product type are you searching for today?"
             puts "Blush"
             puts "Bronzer"
@@ -34,13 +36,13 @@ class MakeupSearch::CLI
             puts "Lipstick"
             puts "Mascara"
             puts "Nail polish"
+              
               input = gets.strip.downcase
               
-              if product_type = MakeupSearch::Makeup.find_by_name(input)
-                MakeupSearch::Makeup.sort_by(&:product_type).each.with_index(1) do |product_type, index|  
+                MakeupSearch::Makeup.all.each.with_index do |product_type, index|  
                 puts "#{index + 1}. #{product_type.name}"
               end 
-              end 
+               
             puts ""
             puts ""
             # :name, :brand, :product_type, :description

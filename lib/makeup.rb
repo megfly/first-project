@@ -19,8 +19,9 @@ class MakeupSearch::Makeup
   def save 
     @@all << self
   end 
-  
-  #def self.product_types
-    #@@all.select { |product|
-  #end 
+
+  def self.find_by_name(name)
+    @@all.select{ |product_type| product_type.name == product_type }
+  end 
+
 end 
