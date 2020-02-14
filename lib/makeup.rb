@@ -20,8 +20,4 @@ class MakeupSearch::Makeup
     @@all << self
   end 
 
-  #def self.find_by_name(name)
-    #@@all.select{ |product_type| product_type.name == product_type }
-  #end 
-
 end 

@@ -40,7 +40,7 @@ class MakeupSearch::CLI
               input = gets.strip.downcase
               
                 MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
-                puts "#{index + 1}: #{product_type}"
+                puts "#{index + 1}. #{product_type.name}"
               end 
                
             puts ""
