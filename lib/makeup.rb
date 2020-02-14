@@ -12,12 +12,15 @@ class MakeupSearch::Makeup
     @@all << self
   end 
   
-  def save 
-    @@all << self
-  end 
-  
   def self.all 
     @@all
   end 
   
+  def save 
+    @@all << self
+  end 
+  
+  #def self.product_types
+    #@@all.select { |product|
+  #end 
 end 

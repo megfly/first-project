@@ -35,15 +35,19 @@ class MakeupSearch::CLI
             puts "Mascara"
             puts "Nail polish"
               input = gets.strip.downcase
-            
-              MakeupSearch::Makeup.all.each_with_index do |product_type, index|     #iterate over data and grab all product_type's with users selection
+              
+              if product_type = MakeupSearch::Makeup.find_by_name(input)
+                MakeupSearch::Makeup.sort_by(&:product_type).each.with_index(1) do |product_type, index|  
                 puts "#{index + 1}. #{product_type.name}"
+              end 
               end 
             puts ""
             puts ""
+            # :name, :brand, :product_type, :description
             #then when user selects a name of the product from the list, it gives them the product name, brand and details of that product
     end 
     
+  def 
     
   
   def bye 
