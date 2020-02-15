@@ -4,7 +4,7 @@ class MakeupSearch::CLI
     puts ""
     puts "Hello gorgeous!"
     puts ""
-    puts "To see products, enter 'products'. Products may take a minute to load!"
+    puts "To see products, enter 'products'. Products may take a moment to load!"
     puts ""
     puts "To exit, enter 'exit'."
     puts ""
@@ -73,7 +73,7 @@ class MakeupSearch::CLI
   
   def bye 
     puts ""
-    puts "See you next time!"
+    puts "Bye! See you next time!"
     puts ""
   end 
   
