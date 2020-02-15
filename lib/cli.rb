@@ -38,7 +38,7 @@ class MakeupSearch::CLI
       input = gets.strip.to_i 
       max = MakeupSearch::Makeup.all.length 
         if input.between?(1,max)
-          display_product_details(number)
+          display_product_details(product)
         else 
           invalid_entry 
           product_list
@@ -46,8 +46,8 @@ class MakeupSearch::CLI
         end 
       end 
       
-  def display_product_details(number)
-    product = MakeupSearch::Makeup.find_makeup(number)
+  def display_product_details(product)
+    product = MakeupSearch::Makeup.find_makeup(product)
     product.each do |p|
       puts "Name: #{p.name}"
       puts "Brand: #{p.brand}"
