@@ -2,7 +2,7 @@ class MakeupSearch::API
   
   def self.get_data 
       url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
-      response = HTTParty.get(url)[1..7]
+      response = HTTParty.get(url)[1..6]
       response.each do |makeup|
         #makeup_object = Makeup.new
         
