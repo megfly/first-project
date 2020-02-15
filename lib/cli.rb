@@ -32,20 +32,21 @@ class MakeupSearch::CLI
       puts ""
     end 
     
-  def choose_product
-    puts "Choose a product by selecting a number:"
-      input = gets.strip.to_i 
-      max = MakeupSearch::Makeup.all.length 
-        if input.between?(1,max)
-          display_product_details(product)
-        else 
-          invalid_entry 
-          product_list
-          choose_product
-        end 
-      end 
+  #def choose_product
+    #puts "Choose a product by selecting a number:"
+      #input = gets.strip.to_i 
+      #max = MakeupSearch::Makeup.all.length 
+        #if input.between?(1,max)
+          #display_product_details(product)
+        #else 
+          #invalid_entry 
+          #product_list
+          #choose_product
+        #end 
+      #end 
       
-  def display_product_details(product)
+  def display_product_details(p)
+    p = MakeupSearch::Makeup.find_makeup(p)
     MakeupSearch::Makeup.each do |p|
       puts "Name: #{p.name}"
       puts "Brand: #{p.brand}"

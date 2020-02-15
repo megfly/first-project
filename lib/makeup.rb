@@ -19,5 +19,11 @@ class MakeupSearch::Makeup
   def save 
     @@all << self
   end 
+  
+  def self.find_makeup(p)
+    self.all.select do |p|
+      p.name == name
+    end 
+  end 
 
 end 
