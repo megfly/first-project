@@ -50,17 +50,20 @@ class MakeupSearch::CLI
   end 
       
   def go_back 
-    puts "To go back to the product list, enter 'back'. Or to exit, enter 'exit'"
+    puts "To go back to the product list, enter 'back'. Or to exit, enter 'exit'."
       input = gets.strip.downcase
         if input == "back"
           product_list
         else if input == "exit"  
           bye
-        else 
-          call
+        else if 
+          invalid_entry
+        else
+          main_menu
         end 
       end 
     end 
+  end 
     
   def invalid_entry 
     puts "Invalid entry, please try again"
@@ -71,3 +74,4 @@ class MakeupSearch::CLI
   end 
   
 end
+
