@@ -23,13 +23,14 @@ class MakeupSearch::CLI
   end 
   
   def product_list  
-    puts "Which product would you like to learn more about?"
       MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
         puts "#{index + 1}. #{product_type.name}"
       end 
-    input = gets.strip.downcase
       puts ""
-      puts ""
+      puts "Which product would you like to learn more about?"
+      input = gets.strip.downcase
+      
+      display_product_details
     end 
     
   #def choose_product
@@ -45,15 +46,16 @@ class MakeupSearch::CLI
         #end 
       #end 
       
-  def display_product_details(p)
-    p = MakeupSearch::Makeup.find_makeup(p)
-    MakeupSearch::Makeup.each do |p|
+  def display_product_details(product)
+    product = MakeupSearch::Makeup.find_makeup(product)
+    product.each do |p|
       puts "Name: #{p.name}"
       puts "Brand: #{p.brand}"
       puts "Product Type: #{p.product_type}"
       puts "Description: #{p.description}"
       puts "#{p.makeup_class}"
     go_back
+  end 
   end 
       
   def go_back 
