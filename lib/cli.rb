@@ -1,16 +1,19 @@
 class MakeupSearch::CLI
   
   def call 
-      puts "Hello gorgeous!"
-      puts "To see products, enter 'products'."
-      puts "To exit, enter 'exit'."
+    puts ""
+    puts "Hello gorgeous!"
+    puts ""
+    puts "To see products, enter 'products'."
+    puts ""
+    puts "To exit, enter 'exit'."
+    puts ""
       MakeupSearch::API.get_data
-    main_menu
-  end 
+        main_menu
+      end 
   
   def main_menu 
     input = gets.strip.downcase 
-    
       if input == "products"
         product_list 
       else if input == "exit"
@@ -26,9 +29,9 @@ class MakeupSearch::CLI
       MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
         puts "#{index + 1}. #{product_type.name}"
       end 
-      puts ""
-      puts "Which product would you like to learn more about?"
-      
+        puts ""
+        puts "Which product would you like to learn more about?"
+        puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
       choose_product(input)
     end 
@@ -36,17 +39,28 @@ class MakeupSearch::CLI
   def choose_product(product)
     prod = MakeupSearch::Makeup.find_makeup(product)
     prod.each do |pr|
+      puts ""
       puts "Name: #{pr.name}"
       puts "Brand: #{pr.brand}"
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
+      puts ""
     end 
+    go_back
   end 
       
   def go_back 
-    puts "To go back to the product list, enter 'back'"
-    product_list
-  end 
+    puts "To go back to the product list, enter 'back'. Or to exit, enter 'exit'"
+      input = gets.strip.downcase
+        if input == "back"
+          product_list
+        else if input == "exit"  
+          bye
+        else 
+          call
+        end 
+      end 
+    end 
     
   def invalid_entry 
     puts "Invalid entry, please try again"
