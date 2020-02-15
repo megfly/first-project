@@ -29,7 +29,7 @@ class MakeupSearch::CLI
       puts ""
       puts "Which product would you like to learn more about?"
       
-      input = gets.strip.titleize
+      input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
       choose_product(input)
     end 
       
