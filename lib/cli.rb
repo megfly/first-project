@@ -30,7 +30,7 @@ class MakeupSearch::CLI
         puts "#{index + 1}. #{product_type.name}"
       end 
         puts ""
-        puts "Which product would you like to learn more about?"
+        puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
         puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
       choose_product(input)
