@@ -42,7 +42,6 @@ class MakeupSearch::CLI
         else 
           invalid_entry 
           product_list
-          choose_product
         end 
       end 
       
