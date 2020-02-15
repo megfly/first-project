@@ -34,14 +34,12 @@ class MakeupSearch::CLI
     end 
       
   def choose_product(product)
-    pr = MakeupSearch::Makeup.find_makeup(product)
-    binding.pry
-    makeup.each do |pr|
+    prod = MakeupSearch::Makeup.find_makeup(product)
+    prod.each do |pr|
       puts "Name: #{pr.name}"
       puts "Brand: #{pr.brand}"
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
-    go_back
     end 
   end 
       
