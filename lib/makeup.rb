@@ -20,9 +20,9 @@ class MakeupSearch::Makeup
     @@all << self
   end 
   
-  def self.find_makeup(p)
-    self.all.select do |p|
-      p.name == name
+  def self.find_makeup(name)
+    self.all.select do |product|
+      product.name == name
     end 
   end 
 

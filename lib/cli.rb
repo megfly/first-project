@@ -28,23 +28,23 @@ class MakeupSearch::CLI
       end 
       puts ""
       puts "Which product would you like to learn more about?"
-      input = gets.strip.downcase
-      
-      display_product_details
+      #input = gets.strip.downcase
+      #display_product_details(input)
+      choose_product
     end 
     
-  #def choose_product
-    #puts "Choose a product by selecting a number:"
-      #input = gets.strip.to_i 
-      #max = MakeupSearch::Makeup.all.length 
-        #if input.between?(1,max)
-          #display_product_details(product)
-        #else 
-          #invalid_entry 
-          #product_list
-          #choose_product
-        #end 
-      #end 
+  def choose_product
+    puts "Choose a product by selecting a number:"
+      input = gets.strip.to_i 
+      max = MakeupSearch::Makeup.all.length 
+        if input.between?(1,max)
+          display_product_details(product)
+        else 
+          invalid_entry 
+          product_list
+          choose_product
+        end 
+      end 
       
   def display_product_details(product)
     product = MakeupSearch::Makeup.find_makeup(product)
