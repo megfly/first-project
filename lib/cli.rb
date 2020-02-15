@@ -22,33 +22,51 @@ class MakeupSearch::CLI
     end 
   end 
   
-  def product_list    
-    #put invalid_entry somewhere....accidentally misspled blush and it kicked me out
-    
-      puts "Which product type are you searching for today?"
-              
-                MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
-                puts "#{index + 1}. #{product_type.name}"
-              end 
-               
-                input = gets.strip.downcase
-            puts ""
-            puts ""
-            # :name, :brand, :product_type, :description
-            #then when user selects a name of the product from the list, it gives them the product name, brand and details of that product
+  def product_list  
+    puts "Which product would you like to learn more about?"
+      MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
+        puts "#{index + 1}. #{product_type.name}"
+      end 
+    input = gets.strip.downcase
+      puts ""
+      puts ""
     end 
     
-  def 
-    
-  
-  def bye 
-    puts "See you next time!"
+  def choose_product
+    puts "Choose a product by selecting a number:"
+      input = gets.strip.to_i 
+      max = MakeupSearch::Makeup.all.length 
+        if input.between?(1,max)
+          display_product_details(product)
+        else 
+          invalid_entry 
+          product_list
+          choose_product
+        end 
+      end 
+      
+  def display_product_details(product)
+    MakeupSearch::Makeup.each do |p|
+      puts "Name: #{p.name}"
+      puts "Brand: #{p.brand}"
+      puts "Product Type: #{p.product_type}"
+      puts "Description: #{p.description}"
+      puts "#{p.makeup_class}"
+    go_back
   end 
-  
+      
+  def go_back 
+    puts "To go back to the product list, enter 'back'"
+    product_list
+  end 
+    
   def invalid_entry 
     puts "Invalid entry, please try again"
   end 
   
+  def bye 
+    puts "See you next time!"
+  end 
   
 end 
 
