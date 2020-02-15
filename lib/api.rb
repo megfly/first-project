@@ -4,7 +4,6 @@ class MakeupSearch::API
       url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
       response = HTTParty.get(url)[21..30]
       response.each do |makeup|
-        #makeup_object = Makeup.new
         
         name = makeup["name"]
         brand = makeup["brand"]

@@ -15,7 +15,7 @@ class MakeupSearch::CLI
   def main_menu 
     input = gets.strip.downcase 
       if input == "products"
-          product_list 
+        product_list 
       else if input == "exit"
         bye
       else 
@@ -26,12 +26,12 @@ class MakeupSearch::CLI
   end 
   
   def product_list  
-      MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
-        puts "#{index + 1}. #{product_type.name}"
-      end 
-        puts ""
-        puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
-        puts ""
+    MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
+      puts "#{index + 1}. #{product_type.name}"
+    end 
+      puts ""
+      puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
+      puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
       choose_product(input)
     end 
