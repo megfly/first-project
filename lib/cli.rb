@@ -4,7 +4,7 @@ class MakeupSearch::CLI
     puts ""
     puts "Hello gorgeous!"
     puts ""
-    puts "To see products, enter 'products'"
+    puts "To see products, enter 'products'. Products may take a minute to load!"
     puts ""
     puts "To exit, enter 'exit'."
     puts ""
@@ -15,7 +15,6 @@ class MakeupSearch::CLI
   def main_menu 
     input = gets.strip.downcase 
       if input == "products"
-        puts "Loading.."
           product_list 
       else if input == "exit"
         bye
