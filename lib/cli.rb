@@ -51,6 +51,7 @@ class MakeupSearch::CLI
       
   def go_back 
     puts "To go back to the product list, enter 'back'. Or to exit, enter 'exit'."
+    puts ""
       input = gets.strip.downcase
         if input == "back"
           product_list
