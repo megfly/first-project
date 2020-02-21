@@ -85,7 +85,6 @@ end
     puts ""
     puts "Bye! See you next time!"
     puts ""
-    bye
   end 
   
 end
