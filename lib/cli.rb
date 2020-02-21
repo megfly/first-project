@@ -25,7 +25,7 @@ class MakeupSearch::CLI
     end 
   end 
   
-  def product_list  
+def product_list  
     MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
       puts "#{index + 1}. #{product_type.name}"
     end 
@@ -33,14 +33,14 @@ class MakeupSearch::CLI
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
-        if input == @name 
+        #if input == @name 
           choose_product(input)
-        else 
-          invalid_entry 
-          go_back
-        end 
+        #else 
+          #invalid_entry 
+          #go_back
+        #end 
       end 
-      
+
   def choose_product(product)
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
@@ -67,21 +67,16 @@ end
           product_list
         else if input == "exit"  
           bye
+        else if 
+          invalid_entry
         else 
-          invalid_entry_product_list
-          choose_product
+          main_menu
         end 
       end 
     end 
   end 
     
   def invalid_entry 
-    puts ""
-    puts "Invalid entry, please try again"
-    puts ""
-  end 
-  
-  def invalid_entry_product_list 
     puts ""
     puts "Invalid entry, please try again"
     puts ""
