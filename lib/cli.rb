@@ -80,7 +80,8 @@ end
     
   def invalid_entry 
     puts ""
-    puts "Invalid entry, please try again. To go back to the product list, enter 'products'. To exit, enter 'exit"
+    puts "Invalid entry, please try again."
+    puts "To go back to the product list, enter 'products'. To exit, enter 'exit'."
     puts ""
   end 
   
