@@ -69,7 +69,9 @@ end
           bye
         else if 
           invalid_entry
-          go_back
+        else 
+          main_menu
+        end 
       end 
     end 
   end 
@@ -78,6 +80,7 @@ end
     puts ""
     puts "Invalid entry, please try again"
     puts ""
+    go_back
   end 
   
   def bye 
