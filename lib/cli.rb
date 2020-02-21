@@ -33,12 +33,12 @@ def product_list
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ")
-      if input == @name
+      #if input == @name
         choose_product(input)
-      else 
-        invalid_entry
-        go_back
-    end 
+      #else 
+        #invalid_entry
+        #go_back
+    #end 
   end 
 
   def choose_product(product)
@@ -70,8 +70,8 @@ end
         else if
           invalid_entry
         else 
-          puts "To see products, enter 'products."
-          puts "To exit, enter 'exit'."
+          puts "To go back to the product list, enter 'products'."
+          puts "To ext, enter 'exit"
           main_menu
         end 
       end 
