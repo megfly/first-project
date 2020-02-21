@@ -67,9 +67,11 @@ end
           product_list
         else if input == "exit"  
           bye
-        else if 
+        else if
           invalid_entry
         else 
+          puts "To see products, enter 'products."
+          puts "To exit, enter 'exit'."
           main_menu
         end 
       end 
