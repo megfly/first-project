@@ -26,20 +26,17 @@ class MakeupSearch::CLI
   end 
   
 def product_list  
+  #variable 
+  #if bariable equals empty array, invalid entry, go back 
+  #else 
     MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
       puts "#{index + 1}. #{product_type.name}"
     end 
       puts ""
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""
-      input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
-        #if input == @name 
-          choose_product(input)
-        #else 
-          #invalid_entry 
-          #go_back
-        #end 
-      end 
+      input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ")
+    end 
 
   def choose_product(product)
     prod = MakeupSearch::Makeup.find_makeup(product)
