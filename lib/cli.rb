@@ -26,10 +26,9 @@ class MakeupSearch::CLI
   end 
   
   def product_list  
-    makeup_prod = MakeupSearch::Makeup.makeup_list
+    prod = MakeupSearch::Makeup.makeup_list
       puts "#{index + 1}. #{product_type.name}"
-    end 
-      if makeup_prod == []
+      if prod == []
         invalid_entry
         go_back
       else
