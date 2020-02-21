@@ -60,10 +60,10 @@ def product_list
 end 
       
   def go_back 
-    puts "To go back to the product list, enter 'back'. Or to exit, enter 'exit'."
+    puts "To go back to the product list, enter 'products'. Or to exit, enter 'exit'."
     puts ""
       input = gets.strip.downcase
-        if input == "back"
+        if input == "products"
           product_list
         else if input == "exit"  
           bye
@@ -82,7 +82,6 @@ end
     puts ""
     puts "Invalid entry, please try again"
     puts ""
-    puts "If you would like to exit, enter 'exit"
   end 
   
   def bye 
