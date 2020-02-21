@@ -26,13 +26,13 @@ class MakeupSearch::CLI
   end 
   
   def product_list  
-    MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
+    makeup_prod = MakeupSearch::Makeup.makeup_list
       puts "#{index + 1}. #{product_type.name}"
     end 
-      #if input is invalid 
-        #invalid_entry
-        #main_menu
-      #else
+      if makeup_prod == []
+        invalid_entry
+        go_back
+      else
       puts ""
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""

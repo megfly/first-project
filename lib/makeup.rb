@@ -21,7 +21,7 @@ class MakeupSearch::Makeup
   end 
   
   def self.makeup_list 
-    self.all.select do |product|
+    self.all.each_with_index do |product_type, index|
   end 
   
   def self.find_makeup(name)
