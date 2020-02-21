@@ -80,7 +80,6 @@ end
     puts ""
     puts "Invalid entry, please try again"
     puts ""
-    go_back
   end 
   
   def bye 
