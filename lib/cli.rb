@@ -26,8 +26,9 @@ class MakeupSearch::CLI
   end 
   
   def product_list  
-    prod = MakeupSearch::Makeup.makeup_list
+    MakeupSearch::Makeup.all.each_with_index do |product_type, index|
       puts "#{index + 1}. #{product_type.name}"
+      prod = MakeupSearch::Makeup.makeup_list
       if prod == []
         invalid_entry
         go_back
@@ -37,6 +38,7 @@ class MakeupSearch::CLI
       puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
       choose_product(input)
+    end 
     end 
       
   def choose_product(product)
