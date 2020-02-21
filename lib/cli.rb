@@ -68,14 +68,20 @@ end
         else if input == "exit"  
           bye
         else 
-          main_menu
-          #invalid_entry
-        #end 
+          invalid_entry_product_list
+          choose_product
+        end 
       end 
     end 
   end 
     
   def invalid_entry 
+    puts ""
+    puts "Invalid entry, please try again"
+    puts ""
+  end 
+  
+  def invalid_entry_product_list 
     puts ""
     puts "Invalid entry, please try again"
     puts ""
