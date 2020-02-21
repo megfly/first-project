@@ -19,12 +19,7 @@ class MakeupSearch::Makeup
   def save 
     @@all << self
   end 
-  
-  def self.makeup_list 
-    self.all.each_with_index do |product_type, index|
-    end 
-  end 
-  
+
   def self.find_makeup(name)
     self.all.select do |product|
       product.name == name
