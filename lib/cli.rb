@@ -33,13 +33,13 @@ class MakeupSearch::CLI
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ") 
-        if input == name 
+        if input == @name 
           choose_product(input)
-      else 
-        invalid_entry 
-        go_back
+        else 
+          invalid_entry 
+          go_back
+        end 
       end 
-    end 
       
   def choose_product(product)
     prod = MakeupSearch::Makeup.find_makeup(product)
@@ -69,9 +69,7 @@ end
           bye
         else if 
           invalid_entry
-        else
-          main_menu
-        end 
+          go_back
       end 
     end 
   end 
