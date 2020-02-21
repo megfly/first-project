@@ -65,12 +65,12 @@ end
       input = gets.strip.downcase
         if input == "back"
           product_list
-        else input == "exit"  
+        else if input == "exit"  
           bye
         else 
           main_menu
           #invalid_entry
-        end 
+        #end 
       end 
     end 
   end 
