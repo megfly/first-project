@@ -67,11 +67,9 @@ end
           product_list
         else if input == "exit"  
           bye
-        else if 
-          invalid_entry
         else 
+          invalid_entry
           main_menu
-        end 
       end 
     end 
   end 
@@ -87,6 +85,7 @@ end
     puts ""
     puts "Bye! See you next time!"
     puts ""
+    bye
   end 
   
 end
