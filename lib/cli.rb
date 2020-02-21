@@ -45,7 +45,6 @@ def product_list
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
        invalid_entry
-       go_back
      else 
     prod.each do |pr|
       puts ""
