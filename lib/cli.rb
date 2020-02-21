@@ -29,6 +29,10 @@ class MakeupSearch::CLI
     MakeupSearch::Makeup.all.each_with_index do |product_type, index|  
       puts "#{index + 1}. #{product_type.name}"
     end 
+      #if input is invalid 
+        #invalid_entry
+        #main_menu
+      #else
       puts ""
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""
@@ -38,6 +42,10 @@ class MakeupSearch::CLI
       
   def choose_product(product)
     prod = MakeupSearch::Makeup.find_makeup(product)
+      if prod == []
+       invalid_entry
+       go_back
+     else 
     prod.each do |pr|
       puts ""
       puts "Name: #{pr.name}"
@@ -48,6 +56,7 @@ class MakeupSearch::CLI
     end 
     go_back
   end 
+end 
       
   def go_back 
     puts "To go back to the product list, enter 'back'. Or to exit, enter 'exit'."
@@ -79,4 +88,3 @@ class MakeupSearch::CLI
   end 
   
 end
-
