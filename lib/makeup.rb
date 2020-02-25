@@ -20,7 +20,7 @@ class MakeupSearch::Makeup
     @@all << self
   end 
   
-  def self.prouduct_type 
+  def self.product_type 
     self.all.select do |p|
     end 
   end 
