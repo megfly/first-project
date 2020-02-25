@@ -72,7 +72,6 @@ end
           #invalid_entry
         else 
           puts "To go back to the product list, enter 'products'."
-          puts "To exit, enter 'exit"
           main_menu
         #end 
       #end 
@@ -82,7 +81,7 @@ end
   def invalid_entry 
     puts ""
     puts "Invalid entry, please try again."
-    puts "To go back to the product list, enter 'products'. To exit, enter 'exit'."
+    puts "To go back to the product list, enter 'products'."
     puts ""
   end 
   
