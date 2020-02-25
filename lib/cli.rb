@@ -66,16 +66,16 @@ end
       input = gets.strip.downcase
         if input == "products"
           product_list
-        else if input == "exit"  
-          bye
-        else if
-          invalid_entry
+        #else if input == "exit"  
+          #bye
+        #else if
+          #invalid_entry
         else 
           puts "To go back to the product list, enter 'products'."
           puts "To exit, enter 'exit"
           main_menu
-        end 
-      end 
+        #end 
+      #end 
     end 
   end 
     
@@ -90,7 +90,6 @@ end
     puts ""
     puts "Bye! See you next time!"
     puts ""
-    main_menu
   end 
   
 end
