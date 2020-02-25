@@ -61,20 +61,21 @@ def product_list
 end 
       
   def go_back 
-    puts "Oops! Please check your spelling. To go back to the product list, enter 'products'."
+    puts "To go back to the product list, enter 'products'."
+    puts "To exit, enter 'exit'"
     puts ""
       input = gets.strip.downcase
         if input == "products"
           product_list
-        #else if input == "exit"  
-          #bye
-        #else if
-          #invalid_entry
+        else if input == "exit"  
+          bye
         else 
-          puts "To go back to the product list, enter 'products'."
-          main_menu
+          invalid_entry
+        #else 
+          #puts "To go back to the product list, enter 'products'."
+          #main_menu
         #end 
-      #end 
+      end 
     end 
   end 
     
