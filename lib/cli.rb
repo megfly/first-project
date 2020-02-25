@@ -37,8 +37,7 @@ def product_list
       
       prod_type = MakeupSearch::Makeup.product_type
       if prod_type == []
-        invalid_entry 
-        go_back
+        invalid_entry
       else 
         choose_product(input)
     end 
@@ -48,7 +47,6 @@ def product_list
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
        invalid_entry
-       go_back
      else 
     prod.each do |pr|
       puts ""
