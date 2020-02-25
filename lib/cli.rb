@@ -33,12 +33,15 @@ def product_list
       puts "Which product would you like to learn more about? Please type in the name of the product from the list!"
       puts ""
       input = gets.strip.split(/ |\_|\-/).map(&:capitalize).join(" ")
-      #if input == @name
+      choose_product(input)
+      
+      prod_type = MakeupSearch::Makeup.product_type
+      if prod_type == []
+        invalid_entry 
+        go_back
+      else 
         choose_product(input)
-      #else 
-        #invalid_entry
-        #go_back
-    #end 
+    end 
   end 
 
   def choose_product(product)

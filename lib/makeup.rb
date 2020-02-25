@@ -19,6 +19,11 @@ class MakeupSearch::Makeup
   def save 
     @@all << self
   end 
+  
+  def self.prouduct_type 
+    self.all.select do |p|
+    end 
+  end 
 
   def self.find_makeup(name)
     self.all.select do |product|
