@@ -37,7 +37,7 @@ def product_list
       
       prod_type = MakeupSearch::Makeup.product_type
       if prod_type == []
-        invalid_entry
+        go_back
       else 
         choose_product(input)
     end 
@@ -46,7 +46,7 @@ def product_list
   def choose_product(product)
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
-       invalid_entry
+       go_back
      else 
     prod.each do |pr|
       puts ""
@@ -61,7 +61,7 @@ def product_list
 end 
       
   def go_back 
-    puts "To go back to the product list, enter 'products'."
+    puts "Oops! Please check your spelling. To go back to the product list, enter 'products'."
     puts ""
       input = gets.strip.downcase
         if input == "products"
@@ -90,6 +90,7 @@ end
     puts ""
     puts "Bye! See you next time!"
     puts ""
+    main_menu
   end 
   
 end
