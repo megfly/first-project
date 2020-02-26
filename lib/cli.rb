@@ -69,7 +69,6 @@ end
         else if input == "exit"  
           bye
         else
-          invalid_entry
           go_back
       end 
     end 
