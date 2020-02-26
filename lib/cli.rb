@@ -62,7 +62,7 @@ end
       
   def go_back 
     puts "To go back to the product list, enter 'products'."
-    puts "To exit, enter 'exit'"
+    #puts "To exit, enter 'exit'"
     puts ""
       input = gets.strip.downcase
         if input == "products"
