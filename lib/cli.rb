@@ -69,8 +69,9 @@ end
           product_list
         else if input == "exit"  
           bye
-        else 
+        else
           invalid_entry
+          main_menu
         #else 
           #puts "To go back to the product list, enter 'products'."
           #main_menu
