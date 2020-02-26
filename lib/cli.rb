@@ -38,8 +38,11 @@ def product_list
       prod_type = MakeupSearch::Makeup.product_type
       if prod_type == []
         go_back
+      else if input == "exit"
+        bye
       else 
         choose_product(input)
+      end 
     end 
   end 
 
@@ -47,7 +50,9 @@ def product_list
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
        go_back
-     else 
+       else if input == "exit"
+        bye
+      else 
     prod.each do |pr|
       puts ""
       puts "Name: #{pr.name}"
@@ -55,6 +60,7 @@ def product_list
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
       puts ""
+      end 
     end 
   end 
 end 
@@ -78,7 +84,6 @@ end
   def invalid_entry 
     puts ""
     puts "Invalid entry, please try again."
-    #puts "To go back to the product list, enter 'products'."
     puts ""
   end 
   
