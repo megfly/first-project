@@ -47,7 +47,7 @@ def product_list
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
        go_back
-     else 
+     else if 
     prod.each do |pr|
       puts ""
       puts "Name: #{pr.name}"
@@ -55,8 +55,11 @@ def product_list
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
       puts ""
+      go_back 
+    else 
+      invalid_entry
     end 
-    go_back
+    end 
   end 
 end 
       
