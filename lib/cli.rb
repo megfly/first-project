@@ -55,20 +55,21 @@ def product_list
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
       puts ""
+      puts "To go back to the product list, enter 'products'."
+      puts "To exit, enter 'exit'"
+      puts ""
     end 
   end 
 end 
       
   def go_back 
-    puts "To go back to the product list, enter 'products'."
-    puts "To exit, enter 'exit'"
-    puts ""
       input = gets.strip.downcase
         if input == "products"
           product_list
         else if input == "exit"  
           bye
         else
+          invalid_entry
           go_back
       end 
     end 
@@ -77,7 +78,7 @@ end
   def invalid_entry 
     puts ""
     puts "Invalid entry, please try again."
-    puts "To go back to the product list, enter 'products'."
+    #puts "To go back to the product list, enter 'products'."
     puts ""
   end 
   
