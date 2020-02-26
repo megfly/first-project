@@ -50,8 +50,6 @@ def product_list
     prod = MakeupSearch::Makeup.find_makeup(product)
       if prod == []
        go_back
-      else if input == "exit"
-        bye
       else 
     prod.each do |pr|
       puts ""
