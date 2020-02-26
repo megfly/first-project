@@ -58,7 +58,6 @@ def product_list
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
       puts ""
-      end 
     end 
   end 
 end 
