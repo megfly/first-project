@@ -56,8 +56,10 @@ def product_list
       puts "Description: #{pr.description}"
       puts ""
       go_back 
-    else 
-      invalid_entry
+    else if
+      invalid_entry 
+    else
+      bye
     end 
     end 
   end 
