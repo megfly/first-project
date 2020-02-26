@@ -71,7 +71,7 @@ end
           bye
         else
           invalid_entry
-          main_menu
+          go_back
       end 
     end 
   end 
