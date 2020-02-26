@@ -55,8 +55,8 @@ def product_list
       puts "Product Type: #{pr.product_type}"
       puts "Description: #{pr.description}"
       puts ""
-      go_back 
     end 
+    go_back
   end 
 end 
       
